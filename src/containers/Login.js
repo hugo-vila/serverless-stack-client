@@ -16,6 +16,7 @@ export default function Login(props) {
 
     try {
       await Auth.signIn(email, password);
+      props.userHasAuthenticated(true);
       alert("Logged In!");
     } catch (e) {
       alert(e.message);
