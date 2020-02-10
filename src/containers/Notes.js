@@ -70,9 +70,8 @@ export default function Notes(props) {
 
     try {
       if (file.current) {
-        let removed;
         attachment = await s3Upload(file.current);
-        removed = await s3Remove(note.attachment);
+        await s3Remove(note.attachment);
       }
 
       await saveNote({ content, attachment: attachment || note.attachment });
