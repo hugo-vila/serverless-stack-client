@@ -6,6 +6,7 @@ import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
+import Error from "./containers/Error";
 import NotFound from "./containers/NotFound";
 import AppliedRoute from "./components/AppliedRoute";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
@@ -45,6 +46,8 @@ export default function Routes({ appProps }) {
         component={Settings}
         appProps={appProps}
       />
+      <Route path="/error" exact component={Error} />
+      <Route path="/error/notes/:id" exact component={Error} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -31,11 +31,14 @@ export default function Notes(props) {
         setNote(note);
       } catch (e) {
         alert(e);
+        props.history.push(
+          `/error?status=${e.response.status}&statustext=${e.response.statusText}&error=${e.response.data.error}&id=${props.match.params.id}`
+        );
       }
     }
 
     onLoad();
-  }, [props.match.params.id]);
+  }, [props.match.params.id, props.history]);
 
   function validateForm() {
     return content.length > 0;
