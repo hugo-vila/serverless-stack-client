@@ -1,0 +1,8 @@
+export default {
+  dev: {
+    STRIPE_KEY: "development_stripe_key"
+  },
+  prod: {
+    STRIPE_KEY: "production_stripe_key"
+  }
+};
