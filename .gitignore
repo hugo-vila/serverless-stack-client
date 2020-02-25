@@ -24,3 +24,6 @@ yarn-error.log*
 
 # amplify
 /src/amplify/config.js
+
+# stripe
+/src/stripe/index.js
